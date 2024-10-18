@@ -20,6 +20,7 @@ function Dashboard() {
                 <Card title={"Soil Mositure"} amount={70} unit={"%"} />
                 <Card title={"Temperature "} amount={80} unit={"°C"} />
                 <Card title={"Humidity"} amount={80} unit={"%"} />
+                
             </div>
         </div>
   )
