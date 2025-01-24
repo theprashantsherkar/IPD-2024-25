@@ -1,13 +1,15 @@
 import express from 'express';
-import { config } from 'dotenv';
+import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import cors from 'cors'
+import cookieparser from 'cookie-parser';
+import AdminRoutes from './routes/adminRoutes.js'
 
 export const app = express();
 
-config({
-    path: "./data/config.env"
-});
+dotenv.config({
+    path:'./data/config.env'
+})
 
 app.use(cors({
     origin: "*",
@@ -19,4 +21,7 @@ app.use(cors({
 }))
 
 app.use(express.json());
+app.use(cookieparser());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use('/admin', AdminRoutes);
