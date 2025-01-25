@@ -1,17 +1,22 @@
+import Navbar from '@/components/custom/Navbar'
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import Hero from './Hero'
+import Features from './Features'
+import Footer from '@/components/custom/Footer'
 
 function Landing() {
   return (
-      <div className='h-screen flex flex-col gap-5 items-center justify-start bg-black text-white py-10'>
-          <nav className='flex items-center justify-center gap-5'>
-              <Link to={'/login'}>Log in</Link>
-              <Link to={'/signup'}>Sign in</Link>
-          </nav>
-          <div className='text-3xl font-semibold'>
-              this is the landing page
-          </div>
-    </div>
+    <>
+    
+      <div className="min-h-screen bg-green-50 flex flex-col">
+
+      <Navbar />
+      <Hero />
+      <Features />
+      <Footer/>
+      </div>
+    </>
   )
 }
 

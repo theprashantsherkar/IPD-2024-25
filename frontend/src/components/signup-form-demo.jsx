@@ -1,11 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
+import { Sprout } from "lucide-react";
 
+export default function Form({ label, isLogin }) {
 
-export default function Form({label, isLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted");
@@ -13,8 +14,8 @@ export default function Form({label, isLogin }) {
   return (
     (<div
       className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-black border border-white">
-      <h2 className="font-bold text-xl text-white dark:text-neutral-200">
-        {label} to Our Product.
+      <h2 className="font-bold text-xl text-white dark:text-neutral-200 flex items-center justify-start">
+        {label} to <Sprout className="text-green-600 ml-2" size={32} />SmartKrishi.
       </h2>
       <form className="my-8" onSubmit={handleSubmit}>
         {!isLogin && <div
