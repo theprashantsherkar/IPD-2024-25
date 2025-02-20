@@ -1,9 +1,9 @@
-import Form from '@/components/signup-form-demo'
+import Form from '@/components/Form'
 import React from 'react'
 
 function Signin() {
   return (
-      <div className='bg-black h-screen flex justify-center items-center'>
+    <div className=' h-screen flex justify-center items-center'>
           <Form label={"SignUp"} isLogin={false}  />
     </div>
   )
