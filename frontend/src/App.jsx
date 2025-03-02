@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Signin from './pages/Signin';
 import Landing from './pages/Landing';
 import { Toaster } from 'react-hot-toast';
+import Values from './pages/Values';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signin />} />
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='realtime' element={ <Values/>} />
       </Routes>
       <Toaster />
     </Router>

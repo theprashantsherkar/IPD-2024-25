@@ -87,8 +87,8 @@ function Dashboard() {
                 <div className='flex items-end gap-4 '>
                     <h1 className='flex items-center gap-3 text-3xl font-bold '><Sprout className='scale-150 text-green-400' /> SmartKrishi</h1>
                     <h2 className="text-2xl font-bold text-gray-800">Soil Parameters Analysis</h2>
-                    {/* <h2>Nitrogen Data:</h2>
-                    <pre>{JSON.stringify(data.Nitrogen, null, 2)}</pre> */}
+                    <h2>Nitrogen Data:</h2>
+                    <pre>{JSON.stringify(data.Nitrogen, null, 2)}</pre>
                 </div>
                 <div className="space-x-2">
                     {Object.keys(parameterConfig).map(param => (
